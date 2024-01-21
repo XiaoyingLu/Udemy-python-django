@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "reviews"
+    "reviews",
+    "profiles"
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,8 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            BASE_DIR / "reviews"
+            BASE_DIR / "reviews",
+            BASE_DIR / "profiles",
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -125,6 +127,9 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static"
+# ]
+
+MEDIA_ROOT = BASE_DIR / "uploads"
+MEDIA_URL = "/user-media/"
